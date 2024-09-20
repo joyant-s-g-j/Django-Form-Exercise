@@ -8,8 +8,8 @@
 </head>
 <body>
     {% load crispy_forms_tags %}
-    <h1>this is home page</h1>
     <div style="width: 50%; margin:auto;">
+        <h1>this is home page</h1>
         <form method="post">
             {% csrf_token %}
             {{form|crispy}}
