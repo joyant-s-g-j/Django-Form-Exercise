@@ -9,7 +9,7 @@ class DummyForm(forms.Form):
     ('green', 'Green'),
     ('black', 'Black'),
     ]
-    name = forms.CharField(initial='Your name', max_length=40)
+    name = forms.CharField(max_length=40)
     email = forms.EmailField(required=False)
     birth_date = forms.DateField(widget=NumberInput(attrs={'type': 'date'}))
     birth_year = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES))
