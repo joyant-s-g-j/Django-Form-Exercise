@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+from . import models
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    dummy = models.DummyModel.objects.all()
+    # print(dummy)
+    return render(request, 'home.html', {'data': dummy})
